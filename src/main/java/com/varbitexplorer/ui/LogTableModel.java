@@ -10,7 +10,7 @@ import java.util.List;
 
 public class LogTableModel extends AbstractTableModel
 {
-	private static final String[] COLUMNS = {"Time", "Type", "ID", "Old", "New", "Notes"};
+	private static final String[] COLUMNS = {"Time", "Tick", "Type", "ID", "Old", "New", "Notes"};
 
 	private final List<LogEntry> entries = new ArrayList<>();
 	private final SimpleDateFormat timeFormat = new SimpleDateFormat("HH:mm:ss.SSS");
@@ -42,14 +42,16 @@ public class LogTableModel extends AbstractTableModel
 			case 0:
 				return timeFormat.format(new Date(e.timestampEpochMs));
 			case 1:
-				return e.type;
+				return e.tick;
 			case 2:
-				return e.id;
+				return e.type;
 			case 3:
-				return e.oldValue;
+				return e.id;
 			case 4:
-				return e.newValue;
+				return e.oldValue;
 			case 5:
+				return e.newValue;
+			case 6:
 				return e.notes;
 			default:
 				return "";

@@ -10,7 +10,7 @@ public interface VarbitExplorerConfig extends Config
 	@ConfigItem(
 		keyName = "outputDirectory",
 		name = "Output Directory",
-		description = "Directory for JSONL export files"
+		description = "Directory for JSONL/CSV export files"
 	)
 	default String outputDirectory()
 	{
@@ -25,5 +25,15 @@ public interface VarbitExplorerConfig extends Config
 	default int maxSnapshots()
 	{
 		return 10;
+	}
+
+	@ConfigItem(
+		keyName = "scopeRadius",
+		name = "Scope Radius",
+		description = "Tiles from the scoped anchor within which events/snapshots are recorded"
+	)
+	default int scopeRadius()
+	{
+		return 24;
 	}
 }
