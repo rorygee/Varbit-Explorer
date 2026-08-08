@@ -8,10 +8,6 @@
 
 Varbit Explorer is a restrained RuneLite plugin for observing variable and varbit state changes in Old School RuneScape.
 
-It focuses on visibility and inspection rather than automation.  
-It does not interpret game mechanics, infer intent, or prescribe workflows.  
-It exposes raw state changes and leaves meaning to the developer.
-
 ---
 
 ## Event Log Panel
